@@ -41,9 +41,57 @@
     .message { font-size: 15px; color: #aabbcc; line-height: 1.8; }
     .coming { margin-top: 40px; font-size: 11px; letter-spacing: 0.3em; color: #556677; }
     
-    /* ナビゲーション */
     nav {
       padding: 20px 40px;
       text-align: center;
       border-bottom: 1px solid #1a2030;
     }
+    nav a {
+      color: #8899aa;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4a9eff;
+    }
+    
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 11px;
+      color: #556677;
+      border-top: 1px solid #1a2030;
+    }
+    
+    @media (max-width: 768px) {
+      nav a { margin: 0 10px; font-size: 12px; }
+      .container { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="services.html">Services</a>
+    <a href="company.html">Company</a>
+  </nav>
+
+  <div class="container">
+    <div class="logo">Ascent<span>Secure</span></div>
+    <div class="tagline">アセントセキュア株式会社</div>
+    <div class="divider"></div>
+    <div class="message">
+      企業インフラを守る、専門的なセキュリティサービスを提供します。<br>
+      サイトは準備中です。
+    </div>
+    <div class="coming">COMING SOON · SEPTEMBER 2025</div>
+  </div>
+  
+  <footer>
+    &copy; 2025 AscentSecure Co., Ltd. All Rights Reserved.
+  </footer>
+</body>
+</html>
