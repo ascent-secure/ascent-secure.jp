@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- セキュリティヘッダー（最大強化） -->
+  <!-- セキュリティヘッダー -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -112,14 +112,28 @@
       letter-spacing: 0.05em;
     }
     
-    .contact-section a {
+    .contact-box {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .contact-box p {
+      color: #333333;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .contact-box a {
       color: #4a9eff;
       text-decoration: none;
       font-size: 16px;
       letter-spacing: 0.05em;
+      font-weight: 600;
     }
     
-    .contact-section a:hover {
+    .contact-box a:hover {
       text-decoration: underline;
     }
     
@@ -132,13 +146,12 @@
       border-top: 1px solid #1a2030;
     }
     
-    /* スマホ対応強化 */
+    /* スマホ対応 */
     @media (max-width: 768px) {
       nav a { margin: 0 10px; font-size: 12px; padding: 6px 12px; }
       main { padding: 40px 20px; }
       h1 { font-size: 22px; margin-bottom: 30px; }
       
-      /* テーブルを縦並びに */
       .info-table th,
       .info-table td {
         display: block;
@@ -160,7 +173,8 @@
       }
       
       .contact-section h2 { font-size: 16px; }
-      .contact-section a { font-size: 14px; }
+      .contact-box { padding: 20px; }
+      .contact-box a { font-size: 14px; }
     }
   </style>
 </head>
@@ -206,14 +220,15 @@
     
     <div class="contact-section">
       <h2>Contact</h2>
-      <p>
+      <div class="contact-box">
+        <p>お問い合わせはこちら</p>
         <a href="mailto:info@ascent-secure.jp">info@ascent-secure.jp</a>
-      </p>
+      </div>
     </div>
   </main>
   
   <footer>
-    &copy; 2026 AscentSecure Co., Ltd. All Rights Reserved.
+    &copy; 2025 AscentSecure Co., Ltd. All Rights Reserved.
   </footer>
 </body>
 </html>
