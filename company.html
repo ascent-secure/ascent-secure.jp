@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- セキュリティヘッダー（最大強化） -->
+  <!-- セキュリティヘッダー -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -132,12 +132,35 @@
       border-top: 1px solid #1a2030;
     }
     
+    /* スマホ対応強化 */
     @media (max-width: 768px) {
-      nav a { margin: 0 10px; font-size: 12px; }
+      nav a { margin: 0 10px; font-size: 12px; padding: 6px 12px; }
       main { padding: 40px 20px; }
-      h1 { font-size: 22px; }
-      .info-table th { width: 40%; font-size: 13px; }
-      .info-table td { font-size: 13px; }
+      h1 { font-size: 22px; margin-bottom: 30px; }
+      
+      /* テーブルを縦並びに */
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+      }
+      
+      .info-table th {
+        padding-bottom: 5px;
+        padding-right: 0;
+        border-bottom: none;
+        font-size: 13px;
+      }
+      
+      .info-table td {
+        padding-top: 5px;
+        padding-bottom: 20px;
+        font-size: 13px;
+      }
+      
+      .contact-section h2 { font-size: 16px; }
+      .contact-section a { font-size: 14px; }
     }
   </style>
 </head>
@@ -173,10 +196,10 @@
       <tr>
         <th>事業内容</th>
         <td>
-          セキュリティエンジニアリングサービス<br>
+          セキュリティエンジニアリング<br>
           SIEM環境構築<br>
           セキュリティコンサルティング<br>
-          セキュリティ基盤構築・運用
+          セキュリティ基盤の構築・運用
         </td>
       </tr>
     </table>
