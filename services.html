@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- セキュリティヘッダー（最大強化） -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  
+  <title>サービス | アセントセキュア株式会社</title>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0e1a;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* ナビゲーション */
+    nav {
+      padding: 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #1a2030;
+    }
+    nav a {
+      color: #8899aa;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4a9eff;
+    }
+    
+    /* メインコンテンツ */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+    
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+    
+    .subtitle {
+      font-size: 15px;
+      color: #8899aa;
+      letter-spacing: 0.1em;
+      margin-bottom: 50px;
+    }
+    
+    .service-section {
+      margin-bottom: 50px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #4a9eff;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+    
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    li {
+      color: #aabbcc;
+      line-height: 2;
+      font-size: 14px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    li:before {
+      content: "・";
+      position: absolute;
+      left: 0;
+      color: #4a9eff;
+    }
+    
+    .target-section {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #1a2030;
+    }
+    
+    .target-section h2 {
+      color: #ffffff;
+    }
+    
+    .target-section p {
+      color: #aabbcc;
+      line-height: 2;
+      font-size: 14px;
+    }
+    
+    .strength-section {
+      margin-top: 40px;
+    }
+    
+    .strength-section h2 {
+      color: #ffffff;
+    }
+    
+    /* フッター */
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 11px;
+      color: #556677;
+      border-top: 1px solid #1a2030;
+    }
+    
+    @media (max-width: 768px) {
+      nav a { margin: 0 10px; font-size: 12px; }
+      main { padding: 40px 20px; }
+      h1 { font-size: 22px; }
+      h2 { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="services.html">サービス</a>
+    <a href="company.html">会社概要</a>
+  </nav>
+
+  <main>
+    <h1>サービス</h1>
+    <p class="subtitle">企業インフラを守る、専門的なセキュリティサービス</p>
+    
+    <div class="service-section">
+      <h2>1. セキュリティエンジニアリングサービス（SES）</h2>
+      <ul>
+        <li>セキュリティエンジニアの常駐・派遣</li>
+        <li>SIEM運用・監視（QRadar、CrowdStrike）</li>
+        <li>脆弱性管理（Tenable/Nessus）</li>
+        <li>ネットワークセキュリティ設計・構築</li>
+      </ul>
+    </div>
+    
+    <div class="service-section">
+      <h2>2. SIEM環境構築</h2>
+      <ul>
+        <li>QRadar SIEM 構築・導入支援</li>
+        <li>CrowdStrike 導入・運用支援</li>
+        <li>ログ収集基盤の設計・構築</li>
+        <li>セキュリティ監視体制の構築</li>
+      </ul>
+    </div>
+    
+    <div class="service-section">
+      <h2>3. インフラセキュリティコンサルティング</h2>
+      <ul>
+        <li>セキュリティ診断・リスク評価</li>
+        <li>パッチ管理戦略の策定</li>
+        <li>インシデント対応支援</li>
+        <li>セキュリティポリシー策定支援</li>
+      </ul>
+    </div>
+    
+    <div class="service-section">
+      <h2>4. セキュリティ基盤構築・運用</h2>
+      <ul>
+        <li>脆弱性スキャナー導入・運用（Nessus、Tenable）</li>
+        <li>ファイアウォール設計・導入（FortiGate等）</li>
+        <li>セキュリティ機器の保守・運用</li>
+      </ul>
+    </div>
+    
+    <div class="target-section">
+      <h2>対象顧客</h2>
+      <p>
+        中堅企業から大企業まで、セキュリティ強化が求められる組織を対象としています。
+      </p>
+    </div>
+    
+    <div class="strength-section">
+      <h2>強み</h2>
+      <ul>
+        <li>インフラとセキュリティ両面からの包括的アプローチ</li>
+        <li>大規模環境での構築・運用実績</li>
+        <li>最新のセキュリティ技術への対応</li>
+      </ul>
+    </div>
+  </main>
+  
+  <footer>
+    &copy; 2025 AscentSecure Co., Ltd. All Rights Reserved.
+  </footer>
+</body>
+</html>
