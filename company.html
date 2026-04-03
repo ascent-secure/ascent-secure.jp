@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- セキュリティヘッダー（最大強化） -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), ambient-light-sensor=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests;">
+  
+  <title>会社概要 | アセントセキュア株式会社</title>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #0a0e1a;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* ナビゲーション */
+    nav {
+      padding: 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #1a2030;
+    }
+    nav a {
+      color: #8899aa;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #4a9eff;
+    }
+    
+    /* メインコンテンツ */
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+    
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      margin-bottom: 50px;
+    }
+    
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .info-table tr {
+      border-bottom: 1px solid #1a2030;
+    }
+    
+    .info-table th {
+      text-align: left;
+      padding: 20px 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4a9eff;
+      width: 30%;
+      letter-spacing: 0.05em;
+    }
+    
+    .info-table td {
+      padding: 20px 0;
+      font-size: 14px;
+      color: #aabbcc;
+      line-height: 1.8;
+    }
+    
+    .company-name-en {
+      display: block;
+      margin-top: 5px;
+      font-size: 13px;
+      color: #8899aa;
+    }
+    
+    .contact-section {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 1px solid #1a2030;
+    }
+    
+    .contact-section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+    
+    .contact-section a {
+      color: #4a9eff;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+    }
+    
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+    
+    /* フッター */
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 11px;
+      color: #556677;
+      border-top: 1px solid #1a2030;
+    }
+    
+    @media (max-width: 768px) {
+      nav a { margin: 0 10px; font-size: 12px; }
+      main { padding: 40px 20px; }
+      h1 { font-size: 22px; }
+      .info-table th { width: 40%; font-size: 13px; }
+      .info-table td { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="services.html">サービス</a>
+    <a href="company.html">会社概要</a>
+  </nav>
+
+  <main>
+    <h1>会社概要</h1>
+    
+    <table class="info-table">
+      <tr>
+        <th>社名</th>
+        <td>
+          アセントセキュア株式会社
+          <span class="company-name-en">AscentSecure Co., Ltd.</span>
+        </td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>
+          東京都大田区<br>
+          （詳細住所は設立後に掲載予定）
+        </td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2025年8月設立予定</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>
+          ・セキュリティエンジニアリングサービス<br>
+          ・SIEM環境構築・運用支援<br>
+          ・インフラセキュリティコンサルティング<br>
+          ・セキュリティ基盤構築・運用
+        </td>
+      </tr>
+    </table>
+    
+    <div class="contact-section">
+      <h2>お問い合わせ</h2>
+      <p>
+        <a href="mailto:info@ascent-secure.jp">info@ascent-secure.jp</a>
+      </p>
+    </div>
+  </main>
+  
+  <footer>
+    &copy; 2025 AscentSecure Co., Ltd. All Rights Reserved.
+  </footer>
+</body>
+</html>
