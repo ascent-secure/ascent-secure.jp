@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  
+
   <!-- ファビコン -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
   <title>アセントセキュア株式会社</title>
-  
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -22,32 +22,33 @@
       display: flex;
       flex-direction: column;
     }
-    .container { 
-      text-align: center; 
-      padding: 40px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .logo { font-size: 28px; font-weight: 700; letter-spacing: 0.1em; color: #ffffff; }
-    .logo span { color: #4a9eff; }
-    .tagline { margin-top: 16px; font-size: 14px; color: #8899aa; letter-spacing: 0.2em; }
-    .divider { width: 40px; height: 2px; background: #4a9eff; margin: 32px auto; }
-    .message { font-size: 15px; color: #aabbcc; line-height: 1.8; }
-    .coming { margin-top: 40px; font-size: 11px; letter-spacing: 0.3em; color: #556677; }
-    
-    /* ナビゲーション */
+
+    /* ヘッダー */
     nav {
-      padding: 20px 40px;
-      text-align: center;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       border-bottom: 1px solid #1a2030;
     }
-    nav a {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-mark { height: 34px; width: auto; display: block; }
+    .brand-text {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+    }
+    .brand-text span { color: #4a9eff; }
+    .nav-links a {
       color: #8899aa;
       text-decoration: none;
-      margin: 0 20px;
+      margin-left: 20px;
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.1em;
@@ -56,11 +57,26 @@
       border-radius: 4px;
       display: inline-block;
     }
-    nav a:hover {
-      color: #0a0e1a;
-      background: #ffffff;
+    .nav-links a:hover { color: #0a0e1a; background: #ffffff; }
+
+    /* ヒーロー */
+    .container {
+      text-align: center;
+      padding: 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    
+    .hero-mark { height: 120px; width: auto; margin-bottom: 28px; }
+    .logo { font-size: 28px; font-weight: 700; letter-spacing: 0.1em; color: #ffffff; }
+    .logo span { color: #4a9eff; }
+    .tagline { margin-top: 16px; font-size: 14px; color: #8899aa; letter-spacing: 0.2em; }
+    .divider { width: 40px; height: 2px; background: #4a9eff; margin: 32px auto; }
+    .message { font-size: 15px; color: #aabbcc; line-height: 1.8; }
+    .coming { margin-top: 40px; font-size: 11px; letter-spacing: 0.3em; color: #556677; }
+
     /* フッター */
     footer {
       padding: 20px;
@@ -69,10 +85,14 @@
       color: #556677;
       border-top: 1px solid #1a2030;
     }
-    
+
     @media (max-width: 768px) {
-      nav a { margin: 0 10px; font-size: 12px; padding: 6px 12px; }
+      nav { padding: 12px 20px; flex-direction: column; gap: 12px; }
+      .brand-mark { height: 30px; }
+      .brand-text { font-size: 16px; }
+      .nav-links a { margin: 0 8px; font-size: 12px; padding: 6px 10px; }
       .container { padding: 20px; }
+      .hero-mark { height: 90px; margin-bottom: 20px; }
       .logo { font-size: 24px; }
       .tagline { font-size: 12px; }
       .message { font-size: 14px; }
@@ -81,12 +101,19 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">HOME</a>
-    <a href="services.html">Services</a>
-    <a href="company.html">Company</a>
+    <a href="index.html" class="brand">
+      <img src="/logo-mark.png" alt="Ascent Secure" class="brand-mark">
+      <span class="brand-text">Ascent<span>Secure</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="services.html">Services</a>
+      <a href="company.html">Company</a>
+    </div>
   </nav>
 
   <div class="container">
+    <img src="/logo-mark.png" alt="Ascent Secure" class="hero-mark">
     <div class="logo">Ascent<span>Secure</span></div>
     <div class="tagline">アセントセキュア株式会社</div>
     <div class="divider"></div>
@@ -94,9 +121,9 @@
       企業インフラを守る、専門的なセキュリティサービスを提供します。<br>
       サイトは準備中です。
     </div>
-    <div class="coming">COMING SOON · SEPTEMBER 2025</div>
+    <div class="coming">COMING SOON &middot; SEPTEMBER 2026</div>
   </div>
-  
+
   <footer>
     &copy; 2026 AscentSecure Co., Ltd. All Rights Reserved.
   </footer>
