@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  
+
   <!-- ファビコン -->
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  
-  <title>アセントセキュア株式会社</title>
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <title>Company | アセントセキュア株式会社</title>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -22,17 +22,33 @@
       display: flex;
       flex-direction: column;
     }
-    
-    /* ナビゲーション */
+
+    /* ヘッダー */
     nav {
-      padding: 20px 40px;
-      text-align: center;
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       border-bottom: 1px solid #1a2030;
     }
-    nav a {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-mark { height: 34px; width: auto; display: block; }
+    .brand-text {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+    }
+    .brand-text span { color: #4a9eff; }
+    .nav-links a {
       color: #8899aa;
       text-decoration: none;
-      margin: 0 20px;
+      margin-left: 20px;
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.1em;
@@ -41,19 +57,17 @@
       border-radius: 4px;
       display: inline-block;
     }
-    nav a:hover {
-      color: #0a0e1a;
-      background: #ffffff;
-    }
-    
+    .nav-links a:hover { color: #0a0e1a; background: #ffffff; }
+
     /* メインコンテンツ */
     main {
       flex: 1;
       max-width: 900px;
       margin: 0 auto;
       padding: 60px 40px;
+      width: 100%;
     }
-    
+
     h1 {
       font-size: 26px;
       font-weight: 700;
@@ -61,16 +75,9 @@
       color: #ffffff;
       margin-bottom: 50px;
     }
-    
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    
-    .info-table tr {
-      border-bottom: 1px solid #1a2030;
-    }
-    
+
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid #1a2030; }
     .info-table th {
       text-align: left;
       padding: 20px 20px 20px 0;
@@ -81,25 +88,22 @@
       letter-spacing: 0.05em;
       vertical-align: top;
     }
-    
     .info-table td {
       padding: 20px 0;
       font-size: 14px;
       color: #aabbcc;
       line-height: 1.8;
     }
-    
+    .info-table td a { color: #aabbcc; text-decoration: none; }
+    .info-table td a:hover { color: #4a9eff; }
     .company-name-en {
       display: block;
       margin-top: 5px;
       font-size: 13px;
       color: #8899aa;
     }
-    
-    .contact-section {
-      margin-top: 60px;
-    }
-    
+
+    .contact-section { margin-top: 60px; }
     .contact-box {
       background: rgba(26, 32, 48, 0.3);
       padding: 30px;
@@ -107,7 +111,6 @@
       border-top: 1px solid #1a2030;
       border-bottom: 1px solid #1a2030;
     }
-    
     .contact-box h2 {
       font-size: 18px;
       font-weight: 600;
@@ -115,25 +118,20 @@
       margin-bottom: 20px;
       letter-spacing: 0.05em;
     }
-    
     .contact-box p {
       color: #8899aa;
       font-size: 13px;
       margin-bottom: 10px;
       letter-spacing: 0.05em;
     }
-    
     .contact-box a {
       color: #4a9eff;
       text-decoration: none;
       font-size: 16px;
       letter-spacing: 0.05em;
     }
-    
-    .contact-box a:hover {
-      text-decoration: underline;
-    }
-    
+    .contact-box a:hover { text-decoration: underline; }
+
     /* フッター */
     footer {
       padding: 20px;
@@ -142,33 +140,32 @@
       color: #556677;
       border-top: 1px solid #1a2030;
     }
-    
-    /* スマホ対応 */
+
     @media (max-width: 768px) {
-      nav a { margin: 0 10px; font-size: 12px; padding: 6px 12px; }
+      nav { padding: 12px 20px; flex-direction: column; gap: 12px; }
+      .brand-mark { height: 30px; }
+      .brand-text { font-size: 16px; }
+      .nav-links a { margin: 0 8px; font-size: 12px; padding: 6px 10px; }
       main { padding: 40px 20px; }
       h1 { font-size: 22px; margin-bottom: 30px; }
-      
+
       .info-table th,
       .info-table td {
         display: block;
         width: 100%;
         padding: 10px 0;
       }
-      
       .info-table th {
         padding-bottom: 5px;
         padding-right: 0;
         border-bottom: none;
         font-size: 13px;
       }
-      
       .info-table td {
         padding-top: 5px;
         padding-bottom: 20px;
         font-size: 13px;
       }
-      
       .contact-box { padding: 20px; }
       .contact-box h2 { font-size: 16px; }
       .contact-box a { font-size: 14px; }
@@ -177,14 +174,20 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">HOME</a>
-    <a href="services.html">Services</a>
-    <a href="company.html">Company</a>
+    <a href="index.html" class="brand">
+      <img src="/logo-mark.png" alt="Ascent Secure" class="brand-mark">
+      <span class="brand-text">Ascent<span>Secure</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="services.html">Services</a>
+      <a href="company.html">Company</a>
+    </div>
   </nav>
 
   <main>
     <h1>Company</h1>
-    
+
     <table class="info-table">
       <tr>
         <th>社名</th>
@@ -196,13 +199,17 @@
       <tr>
         <th>所在地</th>
         <td>
-          東京都大田区<br>
-          （詳細住所は設立後に掲載予定）
+          〒144-0052<br>
+          東京都大田区蒲田5丁目21-13 B2F
         </td>
       </tr>
       <tr>
+        <th>電話番号</th>
+        <td><a href="tel:03-6822-5991">03-6822-5991</a></td>
+      </tr>
+      <tr>
         <th>設立</th>
-        <td>2026年8月設立予定</td>
+        <td>2026年7月</td>
       </tr>
       <tr>
         <th>事業内容</th>
@@ -214,7 +221,7 @@
         </td>
       </tr>
     </table>
-    
+
     <div class="contact-section">
       <div class="contact-box">
         <h2>Contact</h2>
@@ -223,7 +230,7 @@
       </div>
     </div>
   </main>
-  
+
   <footer>
     &copy; 2026 AscentSecure Co., Ltd. All Rights Reserved.
   </footer>
