@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://ascent-secure.jp/sitemap.xml
