@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="アセントセキュア株式会社のサービス。セキュリティエンジニア派遣（SES）、SIEM構築・運用、脆弱性管理・診断、セキュリティ基盤の構築・運用、セキュリティ教育・研修を提供します。">
 
   <!-- ファビコン -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -87,34 +87,33 @@
       font-size: 15px;
       color: #8899aa;
       letter-spacing: 0.1em;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
-    .service-section { margin-bottom: 50px; }
+    .service-section {
+      margin-bottom: 44px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid #1a2030;
+    }
+    .service-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
     h2 {
       font-size: 18px;
       font-weight: 600;
       color: #4a9eff;
-      margin-bottom: 20px;
+      margin-bottom: 14px;
       letter-spacing: 0.05em;
     }
 
-    ul { list-style: none; padding-left: 0; }
-
-    li {
-      color: #aabbcc;
-      line-height: 2;
+    .service-desc {
       font-size: 14px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    li:before {
-      content: "\30fb";
-      position: absolute;
-      left: 0;
-      color: #4a9eff;
+      color: #aabbcc;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
     }
 
     /* フッター */
@@ -134,8 +133,9 @@
       main { padding: 40px 20px; }
       h1 { font-size: 22px; }
       h2 { font-size: 16px; }
-      li { font-size: 13px; }
-      .subtitle { font-size: 14px; }
+      .service-desc { font-size: 13px; }
+      .subtitle { font-size: 14px; margin-bottom: 40px; }
+      .service-section { margin-bottom: 32px; padding-bottom: 32px; }
     }
   </style>
 </head>
@@ -157,42 +157,38 @@
     <p class="subtitle">企業インフラを守る、専門的なセキュリティサービス</p>
 
     <div class="service-section">
-      <h2>1. セキュリティエンジニアリングサービス（SES）</h2>
-      <ul>
-        <li>セキュリティエンジニアの常駐・派遣</li>
-        <li>SIEM運用・監視（QRadar、CrowdStrike）</li>
-        <li>脆弱性管理（Tenable/Nessus）</li>
-        <li>ネットワークセキュリティ設計・構築</li>
-      </ul>
+      <h2>セキュリティエンジニア派遣（SES）</h2>
+      <p class="service-desc">
+        経験豊富なセキュリティエンジニアが、お客様先で設計・構築から運用・監視まで一貫して対応します。
+      </p>
     </div>
 
     <div class="service-section">
-      <h2>2. SIEM環境構築</h2>
-      <ul>
-        <li>QRadar SIEM 構築・導入支援</li>
-        <li>CrowdStrike 導入・運用支援</li>
-        <li>ログ収集基盤の設計・構築</li>
-        <li>セキュリティ監視体制の構築</li>
-      </ul>
+      <h2>SIEM構築・運用</h2>
+      <p class="service-desc">
+        QRadar、CrowdStrikeを用いたログ監視基盤の構築から、セキュリティ監視体制の運用までを支援します。
+      </p>
     </div>
 
     <div class="service-section">
-      <h2>3. インフラセキュリティコンサルティング</h2>
-      <ul>
-        <li>セキュリティ診断・リスク評価</li>
-        <li>パッチ管理戦略の策定</li>
-        <li>インシデント対応支援</li>
-        <li>セキュリティポリシー策定支援</li>
-      </ul>
+      <h2>脆弱性管理・診断</h2>
+      <p class="service-desc">
+        Tenable / Nessusによる脆弱性スキャン、リスク評価、パッチ管理戦略の策定を行います。
+      </p>
     </div>
 
     <div class="service-section">
-      <h2>4. セキュリティ基盤構築・運用</h2>
-      <ul>
-        <li>脆弱性スキャナー導入・運用（Nessus、Tenable）</li>
-        <li>ファイアウォール設計・導入（FortiGate等）</li>
-        <li>セキュリティ機器の保守・運用</li>
-      </ul>
+      <h2>セキュリティ基盤の構築・運用</h2>
+      <p class="service-desc">
+        FortiGate等のファイアウォール設計・導入から、セキュリティ機器の保守・運用までを担います。
+      </p>
+    </div>
+
+    <div class="service-section">
+      <h2>セキュリティ教育・研修</h2>
+      <p class="service-desc">
+        企業のセキュリティ担当者向けに、SIEM（QRadar、CrowdStrike）の運用や脆弱性管理を、実機を用いて実践的に研修します。
+      </p>
     </div>
   </main>
 
