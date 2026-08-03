@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="アセントセキュア株式会社の会社概要。東京都大田区蒲田。2026年7月設立。セキュリティエンジニアリング、SIEM構築、脆弱性管理を専門としています。">
 
-  <!-- ファビコン -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,7 +29,6 @@
       flex-direction: column;
     }
 
-    /* ヘッダー */
     nav {
       padding: 16px 40px;
       display: flex;
@@ -38,113 +36,92 @@
       justify-content: space-between;
       border-bottom: 1px solid #1a2030;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-mark { height: 34px; width: auto; display: block; }
     .brand-text {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #ffffff;
+      font-size: 18px; font-weight: 700;
+      letter-spacing: 0.08em; color: #ffffff;
     }
     .nav-links a {
-      color: #8899aa;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      transition: all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 4px;
-      display: inline-block;
+      color: #64748b; text-decoration: none; margin-left: 20px;
+      font-size: 13px; letter-spacing: 0.1em;
+      transition: color 0.3s ease;
+      padding: 8px 14px; display: inline-block;
     }
-    .nav-links a:hover { color: #0a0e1a; background: #ffffff; }
+    .nav-links a:hover { color: #cbd5e1; }
 
-    /* メインコンテンツ */
     main {
-      flex: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 40px;
-      width: 100%;
+      flex: 1; max-width: 620px; margin: 0 auto;
+      padding: 64px 30px 80px; width: 100%;
     }
 
     h1 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #ffffff;
-      margin-bottom: 50px;
+      font-size: 26px; font-weight: 700;
+      letter-spacing: 0.16em; color: #f2f5f8;
+      margin-bottom: 56px;
     }
 
-    .info-table { width: 100%; border-collapse: collapse; }
-    .info-table tr { border-bottom: 1px solid #1a2030; }
-    .info-table th {
-      text-align: left;
-      padding: 20px 20px 20px 0;
-      font-size: 14px;
-      font-weight: 600;
-      color: #4a9eff;
-      width: 30%;
-      letter-spacing: 0.05em;
-      vertical-align: top;
+    .info { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .info th {
+      text-align: left; padding: 24px 20px 24px 0;
+      font-size: 13px; font-weight: 600; color: #e2e8f0;
+      width: 32%; letter-spacing: 0.08em; vertical-align: top;
     }
-    .info-table td {
-      padding: 20px 0;
-      font-size: 14px;
-      color: #aabbcc;
-      line-height: 1.8;
+    .info td {
+      padding: 24px 0; font-size: 13.5px;
+      color: #94a3b8; line-height: 1.95;
     }
-    .info-table td a { color: #aabbcc; text-decoration: none; }
-    .info-table td a:hover { color: #4a9eff; }
-    .company-name-en {
-      display: block;
-      margin-top: 5px;
-      font-size: 13px;
-      color: #8899aa;
+    .info tr:not(:last-child) th,
+    .info tr:not(:last-child) td {
+      background-image: linear-gradient(90deg, transparent, #1e2532 12%, #1e2532 88%, transparent);
+      background-size: 100% 1px;
+      background-position: bottom;
+      background-repeat: no-repeat;
+    }
+    .info td a { color: #94a3b8; text-decoration: none; }
+    .info td a:hover { color: #cbd5e1; }
+
+    .name-en {
+      display: block; margin-top: 6px;
+      font-size: 12px; color: #64748b; letter-spacing: 0.04em;
     }
 
-    .contact-section { margin-top: 60px; }
-    .contact-box {
-      background: rgba(26, 32, 48, 0.3);
-      padding: 30px;
-      border-radius: 4px;
-      border-top: 1px solid #1a2030;
-      border-bottom: 1px solid #1a2030;
+    .mono {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      color: #b8c4d2; font-size: 13px; letter-spacing: 0.01em;
     }
-    .contact-box h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #ffffff;
-      margin-bottom: 20px;
-      letter-spacing: 0.05em;
-    }
-    .contact-box p {
-      color: #8899aa;
-      font-size: 13px;
-      margin-bottom: 10px;
-      letter-spacing: 0.05em;
-    }
-    .contact-box a {
-      color: #4a9eff;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: 0.05em;
-    }
-    .contact-box a:hover { text-decoration: underline; }
 
-    /* フッター */
+    .contact { margin-top: 64px; padding-top: 44px; position: relative; }
+    .contact::before {
+      content: ""; position: absolute;
+      left: 0; right: 0; top: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, #1e2532 12%, #1e2532 88%, transparent);
+    }
+    .contact h2 {
+      font-size: 15px; font-weight: 600; color: #cbd5e1;
+      letter-spacing: 0.1em; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .contact h2::before {
+      content: ""; flex: none;
+      width: 18px; height: 1px; background: #3d4a5c;
+    }
+    .contact p {
+      color: #64748b; font-size: 12.5px;
+      margin-bottom: 12px; letter-spacing: 0.06em;
+    }
+    .contact a.mail {
+      color: #b8c4d2; text-decoration: none;
+      font-size: 15px; letter-spacing: 0.04em;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      border-bottom: 1px solid #2a3446;
+    }
+    .contact a.mail:hover { color: #e2e8f0; }
+
     footer {
-      padding: 20px;
-      text-align: center;
-      font-size: 11px;
-      color: #556677;
+      padding: 22px; text-align: center;
+      font-size: 11px; color: #556677;
       border-top: 1px solid #1a2030;
     }
 
@@ -153,70 +130,61 @@
       .brand-mark { height: 30px; }
       .brand-text { font-size: 16px; }
       .nav-links a { margin: 0 8px; font-size: 12px; padding: 6px 10px; }
-      main { padding: 40px 20px; }
-      h1 { font-size: 22px; margin-bottom: 30px; }
+      main { padding: 48px 22px 60px; }
+      h1 { font-size: 22px; letter-spacing: 0.13em; margin-bottom: 36px; }
 
-      .info-table th,
-      .info-table td {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
+      .info th, .info td {
+        display: block; width: 100%; padding: 0;
       }
-      .info-table th {
-        padding-bottom: 5px;
-        padding-right: 0;
-        border-bottom: none;
-        font-size: 13px;
+      .info th {
+        padding-top: 20px; padding-bottom: 6px;
+        font-size: 12.5px; background-image: none !important;
       }
-      .info-table td {
-        padding-top: 5px;
-        padding-bottom: 20px;
-        font-size: 13px;
-      }
-      .contact-box { padding: 20px; }
-      .contact-box h2 { font-size: 16px; }
-      .contact-box a { font-size: 14px; }
+      .info td { padding-bottom: 20px; font-size: 13px; }
+
+      .contact { margin-top: 44px; padding-top: 36px; }
+      .contact a.mail { font-size: 13.5px; }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="brand">
+    <a href="/index.html" class="brand">
       <img src="/logo-mark.png" alt="ascent-secure" class="brand-mark">
       <span class="brand-text">ascent-secure</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="services.html">Services</a>
-      <a href="company.html">Company</a>
+      <a href="/index.html">HOME</a>
+      <a href="/services.html">Services</a>
+      <a href="/company.html">Company</a>
     </div>
   </nav>
 
   <main>
     <h1>Company</h1>
 
-    <table class="info-table">
+    <table class="info">
       <tr>
         <th>社名</th>
         <td>
           アセントセキュア株式会社
-          <span class="company-name-en">Ascent Secure Inc.</span>
+          <span class="name-en">Ascent Secure Inc.</span>
         </td>
       </tr>
       <tr>
         <th>所在地</th>
         <td>
-          〒144-0052<br>
+          <span class="mono">〒144-0052</span><br>
           東京都大田区蒲田5丁目21-13 B2F
         </td>
       </tr>
       <tr>
         <th>電話番号</th>
-        <td><a href="tel:03-6822-5991">03-6822-5991</a></td>
+        <td><a href="tel:03-6822-5991" class="mono">03-6822-5991</a></td>
       </tr>
       <tr>
         <th>設立</th>
-        <td>2026年7月19日</td>
+        <td><span class="mono">2026年7月19日</span></td>
       </tr>
       <tr>
         <th>代表者</th>
@@ -234,12 +202,10 @@
       </tr>
     </table>
 
-    <div class="contact-section">
-      <div class="contact-box">
-        <h2>Contact</h2>
-        <p>お問い合わせはこちら</p>
-        <a href="mailto:info@ascent-secure.jp">info@ascent-secure.jp</a>
-      </div>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>お問い合わせはこちら</p>
+      <a href="mailto:info@ascent-secure.jp" class="mail">info@ascent-secure.jp</a>
     </div>
   </main>
 
