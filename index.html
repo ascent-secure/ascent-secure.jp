@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="アセントセキュア株式会社は、企業インフラを守る専門のセキュリティエンジニアリング企業です。SIEM構築、脆弱性管理、セキュリティ基盤の構築・運用、教育・研修まで対応します。">
 
-  <!-- ファビコン -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -37,58 +36,72 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #1a2030;
+      position: relative;
+      z-index: 3;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-mark { height: 34px; width: auto; display: block; }
     .brand-text {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #ffffff;
+      font-size: 18px; font-weight: 700;
+      letter-spacing: 0.08em; color: #ffffff;
     }
     .nav-links a {
-      color: #8899aa;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      transition: all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 4px;
-      display: inline-block;
+      color: #64748b; text-decoration: none; margin-left: 20px;
+      font-size: 13px; letter-spacing: 0.1em;
+      transition: color 0.3s ease;
+      padding: 8px 14px; display: inline-block;
     }
-    .nav-links a:hover { color: #0a0e1a; background: #ffffff; }
+    .nav-links a:hover { color: #cbd5e1; }
 
     /* ヒーロー */
-    .container {
-      text-align: center;
-      padding: 40px;
+    .hero {
+      position: relative;
       flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
+      padding: 80px 30px;
     }
-    .hero-mark { height: 120px; width: auto; margin-bottom: 28px; }
-    .logo { font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif; font-size: 28px; font-weight: 700; letter-spacing: 0.1em; color: #ffffff; }
-    .tagline { margin-top: 16px; font-size: 14px; color: #8899aa; letter-spacing: 0.2em; }
-    .divider { width: 40px; height: 2px; background: #4a9eff; margin: 32px auto; }
-    .message { font-size: 15px; color: #aabbcc; line-height: 1.8; }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 200%; height: 100%;
+      z-index: 1;
+      animation: drift 90s linear infinite;
+    }
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg { animation: none; }
+    }
+
+    .hero-inner { position: relative; z-index: 2; text-align: center; }
+    .hero-mark { height: 108px; width: auto; margin-bottom: 30px; }
+    .logo {
+      font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 28px; font-weight: 700;
+      letter-spacing: 0.16em; color: #f2f5f8;
+    }
+    .tagline {
+      margin-top: 16px; font-size: 12px;
+      color: #64748b; letter-spacing: 0.22em;
+    }
+    .divider { width: 36px; height: 1px; background: #3a4556; margin: 30px auto; }
+    .message {
+      font-size: 14px; color: #94a3b8;
+      line-height: 2.05; letter-spacing: 0.02em;
+    }
 
     /* フッター */
     footer {
-      padding: 20px;
-      text-align: center;
-      font-size: 11px;
-      color: #556677;
+      padding: 22px; text-align: center;
+      font-size: 11px; color: #556677;
       border-top: 1px solid #1a2030;
+      position: relative; z-index: 3;
     }
 
     @media (max-width: 768px) {
@@ -96,34 +109,51 @@
       .brand-mark { height: 30px; }
       .brand-text { font-size: 16px; }
       .nav-links a { margin: 0 8px; font-size: 12px; padding: 6px 10px; }
-      .container { padding: 20px; }
-      .hero-mark { height: 90px; margin-bottom: 20px; }
-      .logo { font-size: 24px; }
-      .tagline { font-size: 12px; }
-      .message { font-size: 14px; }
+      .hero { padding: 56px 22px; }
+      .hero-mark { height: 84px; margin-bottom: 24px; }
+      .logo { font-size: 23px; letter-spacing: 0.13em; }
+      .tagline { font-size: 11px; }
+      .message { font-size: 13px; }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="brand">
+    <a href="/index.html" class="brand">
       <img src="/logo-mark.png" alt="ascent-secure" class="brand-mark">
       <span class="brand-text">ascent-secure</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="services.html">Services</a>
-      <a href="company.html">Company</a>
+      <a href="/index.html">HOME</a>
+      <a href="/services.html">Services</a>
+      <a href="/company.html">Company</a>
     </div>
   </nav>
 
-  <div class="container">
-    <img src="/logo-mark.png" alt="ascent-secure" class="hero-mark">
-    <div class="logo">ascent-secure</div>
-    <div class="tagline">アセントセキュア株式会社</div>
-    <div class="divider"></div>
-    <div class="message">
-      企業インフラを守る、専門的なセキュリティエンジニアリング。
+  <div class="hero">
+    <svg class="hero-bg" viewBox="0 0 2400 440" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="#1c2536" stroke-width="1">
+        <path d="M0,340 Q200,260 400,310 T800,280 T1200,320 T1600,280 T2000,310 T2400,340"/>
+        <path d="M0,364 Q210,284 410,334 T810,304 T1210,344 T1610,304 T2010,334 T2400,364"/>
+        <path d="M0,388 Q220,308 420,358 T820,328 T1220,368 T1620,328 T2020,358 T2400,388"/>
+        <path d="M0,308 Q190,222 390,276 T790,246 T1190,288 T1590,246 T1990,276 T2400,308"/>
+        <path d="M0,278 Q180,186 380,244 T780,212 T1180,258 T1580,212 T1980,244 T2400,278"/>
+      </g>
+      <g fill="none" stroke="#161e2c" stroke-width="1">
+        <path d="M0,248 Q170,150 370,212 T770,178 T1170,228 T1570,178 T1970,212 T2400,248"/>
+        <path d="M0,218 Q160,114 360,180 T760,144 T1160,198 T1560,144 T1960,180 T2400,218"/>
+        <path d="M0,188 Q150,78 350,150 T750,110 T1150,168 T1550,110 T1950,150 T2400,188"/>
+      </g>
+    </svg>
+
+    <div class="hero-inner">
+      <img src="/logo-mark.png" alt="ascent-secure" class="hero-mark">
+      <div class="logo">ascent-secure</div>
+      <div class="tagline">アセントセキュア株式会社</div>
+      <div class="divider"></div>
+      <div class="message">
+        企業インフラを守る、専門的なセキュリティエンジニアリング。
+      </div>
     </div>
   </div>
 
