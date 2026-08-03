@@ -97,6 +97,9 @@
     }
     .sp-br { display: none; }
 
+    /* スマホ専用の背景（PCでは非表示） */
+    .sp-fog, .sp-lines { display: none; }
+
     /* フッター */
     footer {
       padding: 22px; text-align: center;
@@ -116,8 +119,23 @@
         padding: 6px 12px; letter-spacing: 0.08em;
       }
 
-      /* 等高線をスマホでは控えめに */
-      .hero-bg { opacity: 0.55; }
+      /* PC用の流れる等高線はスマホでは非表示 */
+      .hero-bg { display: none; }
+
+      /* スマホ専用：霧のグラデーション＋最下部の等高線 */
+      .sp-fog {
+        display: block;
+        position: absolute; inset: 0; z-index: 1;
+        background: linear-gradient(to top,
+          rgba(45,62,90,0.32) 0%,
+          rgba(28,38,56,0.14) 40%,
+          transparent 74%);
+      }
+      .sp-lines {
+        display: block;
+        position: absolute; inset: 0; z-index: 1;
+        width: 100%; height: 100%;
+      }
 
       .hero { padding: 64px 24px 72px; }
       .hero-mark { height: 76px; margin-bottom: 26px; }
@@ -161,6 +179,18 @@
         <path d="M0,248 Q170,150 370,212 T770,178 T1170,228 T1570,178 T1970,212 T2400,248"/>
         <path d="M0,218 Q160,114 360,180 T760,144 T1160,198 T1560,144 T1960,180 T2400,218"/>
         <path d="M0,188 Q150,78 350,150 T750,110 T1150,168 T1550,110 T1950,150 T2400,188"/>
+      </g>
+    </svg>
+
+    <div class="sp-fog" aria-hidden="true"></div>
+    <svg class="sp-lines" viewBox="0 0 375 500" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="#1b2534" stroke-width="1">
+        <path d="M-20,404 Q88,366 188,390 T400,372"/>
+      </g>
+      <g fill="none" stroke="#243347" stroke-width="1">
+        <path d="M-20,432 Q90,394 190,418 T400,400"/>
+        <path d="M-20,460 Q95,420 195,446 T400,426"/>
+        <path d="M-20,488 Q100,446 200,474 T400,452"/>
       </g>
     </svg>
 
