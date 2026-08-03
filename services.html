@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="アセントセキュア株式会社のサービス。セキュリティエンジニア派遣（SES）、SIEM構築・運用、脆弱性管理・診断、セキュリティ基盤の構築・運用、セキュリティ教育・研修を提供します。">
 
-  <!-- ファビコン -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -30,7 +29,6 @@
       flex-direction: column;
     }
 
-    /* ヘッダー */
     nav {
       padding: 16px 40px;
       display: flex;
@@ -38,90 +36,79 @@
       justify-content: space-between;
       border-bottom: 1px solid #1a2030;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-mark { height: 34px; width: auto; display: block; }
     .brand-text {
       font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: #ffffff;
+      font-size: 18px; font-weight: 700;
+      letter-spacing: 0.08em; color: #ffffff;
     }
     .nav-links a {
-      color: #8899aa;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 13px;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      transition: all 0.3s ease;
-      padding: 8px 16px;
-      border-radius: 4px;
-      display: inline-block;
+      color: #64748b; text-decoration: none; margin-left: 20px;
+      font-size: 13px; letter-spacing: 0.1em;
+      transition: color 0.3s ease;
+      padding: 8px 14px; display: inline-block;
     }
-    .nav-links a:hover { color: #0a0e1a; background: #ffffff; }
+    .nav-links a:hover { color: #cbd5e1; }
 
-    /* メインコンテンツ */
     main {
-      flex: 1;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 40px;
-      width: 100%;
+      flex: 1; max-width: 620px; margin: 0 auto;
+      padding: 64px 30px 80px; width: 100%;
     }
 
     h1 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: #ffffff;
-      margin-bottom: 16px;
+      font-size: 26px; font-weight: 700;
+      letter-spacing: 0.16em; color: #f2f5f8;
+      margin-bottom: 14px;
     }
-
     .subtitle {
-      font-size: 15px;
-      color: #8899aa;
-      letter-spacing: 0.1em;
-      margin-bottom: 60px;
+      font-size: 13px; color: #64748b;
+      letter-spacing: 0.14em; margin-bottom: 64px;
     }
 
-    .service-section {
-      margin-bottom: 44px;
-      padding-bottom: 44px;
-      border-bottom: 1px solid #1a2030;
+    .sec { position: relative; padding: 0 0 46px; }
+    .sec + .sec { padding-top: 46px; }
+    .sec::after {
+      content: ""; position: absolute;
+      left: 0; right: 0; bottom: 0; height: 1px;
     }
-    .service-section:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
+    .sec:nth-of-type(1)::after {
+      background: linear-gradient(90deg, transparent, #232c3c 18%, #232c3c 82%, transparent);
     }
+    .sec:nth-of-type(2)::after {
+      background: linear-gradient(90deg, transparent, #1f2735 18%, #1f2735 82%, transparent);
+    }
+    .sec:nth-of-type(3)::after {
+      background: linear-gradient(90deg, transparent, #1b222e 18%, #1b222e 82%, transparent);
+    }
+    .sec:nth-of-type(4)::after {
+      background: linear-gradient(90deg, transparent, #171d27 18%, #171d27 82%, transparent);
+    }
+    .sec:last-of-type::after { display: none; }
 
     h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #4a9eff;
-      margin-bottom: 14px;
-      letter-spacing: 0.05em;
+      font-size: 17px; font-weight: 600; color: #cbd5e1;
+      margin-bottom: 18px; letter-spacing: 0.08em;
+      display: flex; align-items: center; gap: 14px;
+    }
+    h2::before {
+      content: ""; flex: none;
+      width: 18px; height: 1px; background: #3d4a5c;
     }
 
-    .service-desc {
-      font-size: 14px;
-      color: #aabbcc;
-      line-height: 1.9;
-      letter-spacing: 0.02em;
+    .desc {
+      font-size: 13.5px; line-height: 2.05;
+      color: #94a3b8; letter-spacing: 0.02em;
     }
 
-    /* フッター */
+    .mono {
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      color: #b8c4d2; font-size: 13px; letter-spacing: 0.01em;
+    }
+
     footer {
-      padding: 20px;
-      text-align: center;
-      font-size: 11px;
-      color: #556677;
+      padding: 22px; text-align: center;
+      font-size: 11px; color: #556677;
       border-top: 1px solid #1a2030;
     }
 
@@ -130,25 +117,26 @@
       .brand-mark { height: 30px; }
       .brand-text { font-size: 16px; }
       .nav-links a { margin: 0 8px; font-size: 12px; padding: 6px 10px; }
-      main { padding: 40px 20px; }
-      h1 { font-size: 22px; }
+      main { padding: 48px 22px 60px; }
+      h1 { font-size: 22px; letter-spacing: 0.13em; }
+      .subtitle { font-size: 12px; margin-bottom: 44px; }
       h2 { font-size: 16px; }
-      .service-desc { font-size: 13px; }
-      .subtitle { font-size: 14px; margin-bottom: 40px; }
-      .service-section { margin-bottom: 32px; padding-bottom: 32px; }
+      .desc { font-size: 13px; }
+      .sec { padding-bottom: 34px; }
+      .sec + .sec { padding-top: 34px; }
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html" class="brand">
+    <a href="/index.html" class="brand">
       <img src="/logo-mark.png" alt="ascent-secure" class="brand-mark">
       <span class="brand-text">ascent-secure</span>
     </a>
     <div class="nav-links">
-      <a href="index.html">HOME</a>
-      <a href="services.html">Services</a>
-      <a href="company.html">Company</a>
+      <a href="/index.html">HOME</a>
+      <a href="/services.html">Services</a>
+      <a href="/company.html">Company</a>
     </div>
   </nav>
 
@@ -156,38 +144,38 @@
     <h1>Services</h1>
     <p class="subtitle">企業インフラを守る、専門的なセキュリティサービス</p>
 
-    <div class="service-section">
+    <div class="sec">
       <h2>セキュリティエンジニア派遣（SES）</h2>
-      <p class="service-desc">
+      <p class="desc">
         経験豊富なセキュリティエンジニアが、お客様先で設計・構築から運用・監視まで一貫して対応します。
       </p>
     </div>
 
-    <div class="service-section">
+    <div class="sec">
       <h2>SIEM構築・運用</h2>
-      <p class="service-desc">
-        QRadar、CrowdStrikeを用いたログ監視基盤の構築から、セキュリティ監視体制の運用までを支援します。
+      <p class="desc">
+        <span class="mono">QRadar</span>、<span class="mono">CrowdStrike</span> を用いたログ監視基盤の構築から、セキュリティ監視体制の運用までを支援します。
       </p>
     </div>
 
-    <div class="service-section">
+    <div class="sec">
       <h2>脆弱性管理・診断</h2>
-      <p class="service-desc">
-        Tenable / Nessusによる脆弱性スキャン、リスク評価、パッチ管理戦略の策定を行います。
+      <p class="desc">
+        <span class="mono">Tenable / Nessus</span> による脆弱性スキャン、リスク評価、パッチ管理戦略の策定を行います。
       </p>
     </div>
 
-    <div class="service-section">
+    <div class="sec">
       <h2>セキュリティ基盤の構築・運用</h2>
-      <p class="service-desc">
-        FortiGate等のファイアウォール設計・導入から、セキュリティ機器の保守・運用までを担います。
+      <p class="desc">
+        <span class="mono">FortiGate</span> 等のファイアウォール設計・導入から、セキュリティ機器の保守・運用までを担います。
       </p>
     </div>
 
-    <div class="service-section">
+    <div class="sec">
       <h2>セキュリティ教育・研修</h2>
-      <p class="service-desc">
-        企業のセキュリティ担当者向けに、SIEM（QRadar、CrowdStrike）の運用や脆弱性管理を、実機を用いて実践的に研修します。
+      <p class="desc">
+        企業のセキュリティ担当者向けに、SIEM（<span class="mono">QRadar</span>、<span class="mono">CrowdStrike</span>）の運用や脆弱性管理を、実機を用いて実践的に研修します。
       </p>
     </div>
   </main>
